@@ -1,0 +1,8 @@
+# default setting
+.DS_Store
+.vagrant
+.envrc
+.pryrc
+Gemfile.local
+Gemfile.local.lock
+.todo_memo

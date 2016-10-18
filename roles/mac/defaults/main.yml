@@ -1,0 +1,410 @@
+---
+osx_defaults:
+  #
+  # Apple Bluetooth Multitouch Trackpad
+  #
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: Clicking
+    type: bool
+    value: true
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: DragLock
+    type: bool
+    value: false
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: Dragging
+    type: bool
+    value: false
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadCornerSecondaryClick
+    type: int
+    value: 0
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadFiveFingerPinchGesture
+    type: int
+    value: 2
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadFourFingerHorizSwipeGesture
+    type: int
+    value: 2
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadFourFingerPinchGesture
+    type: int
+    value: 2
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadFourFingerVertSwipeGesture
+    type: int
+    value: 2
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadHandResting
+    type: bool
+    value: true
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadHorizScroll
+    type: int
+    value: 1
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadMomentumScroll
+    type: bool
+    value: true
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadPinch
+    type: int
+    value: 1
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadRightClick
+    type: bool
+    value: true
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadRotate
+    type: int
+    value: 1
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadScroll
+    type: bool
+    value: true
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadThreeFingerDrag
+    type: bool
+    value: true
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadThreeFingerHorizSwipeGesture
+    type: int
+    value: 0
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadThreeFingerTapGesture
+    type: int
+    value: 2
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadThreeFingerVertSwipeGesture
+    type: int
+    value: 0
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadTwoFingerDoubleTapGesture
+    type: int
+    value: 1
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadTwoFingerFromRightEdgeSwipeGesture
+    type: int
+    value: 3
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: USBMouseStopsTrackpad
+    type: int
+    value: 0
+
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: UserPreferences
+    type: bool
+    value: true
+
+  #
+  # Apple Multitouch Trackpad
+  #
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: ActuateDetents
+    type: int
+    value: 1
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: Clicking
+    type: bool
+    value: true
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: DragLock
+    type: bool
+    value: false
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: Dragging
+    type: bool
+    value: false
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: FirstClickThreshold
+    type: int
+    value: 1
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: ForceSuppressed
+    type: bool
+    value: false
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: SecondClickThreshold
+    type: int
+    value: 1
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadCornerSecondaryClick
+    type: int
+    value: 0
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadFiveFingerPinchGesture
+    type: int
+    value: 2
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadFourFingerHorizSwipeGesture
+    type: int
+    value: 2
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadFourFingerPinchGesture
+    type: int
+    value: 2
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadFourFingerVertSwipeGesture
+    type: int
+    value: 2
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadHandResting
+    type: bool
+    value: true
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadHorizScroll
+    type: int
+    value: 1
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadMomentumScroll
+    type: bool
+    value: 1
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadPinch
+    type: int
+    value: 1
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadRightClick
+    type: bool
+    value: true
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadRotate
+    type: int
+    value: 1
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadScroll
+    type: bool
+    value: true
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadThreeFingerDrag
+    type: bool
+    value: true
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadThreeFingerHorizSwipeGesture
+    type: int
+    value: 0
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadThreeFingerTapGesture
+    type: int
+    value: 2
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadThreeFingerVertSwipeGesture
+    type: int
+    value: 0
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadThreeFingersRightClick
+    type: bool
+    value: false
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadTwoFingerDoubleTapGesture
+    type: int
+    value: 1
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadTwoFingerFromRightEdgeSwipeGesture
+    type: int
+    value: 3
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: USBMouseStopsTrackpad
+    type: int
+    value: 0
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: UserPreferences
+    type: bool
+    value: true
+
+  #
+  # Dock
+  #
+  - domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true
+
+  - domain: com.apple.dock
+    key: autohide-delay
+    type: float
+    value: 0
+
+  - domain: com.apple.dock
+    key: mineffect
+    type: string
+    value: "genie"
+
+  - domain: com.apple.dock
+    key: showAppExposeGestureEnabled
+    type: bool
+    value: true
+
+  #
+  # Finder
+  #
+  - domain: NSGlobalDomain
+    key: AppleShowAllExtensions
+    type: bool
+    value: true
+
+  - domain: com.apple.finder
+    key: AppleShowAllFiles
+    type: string
+    value: 'TRUE'
+
+  - domain: com.apple.finder
+    key: ShowPathBar
+    type: bool
+    value: true
+
+  - domain: com.apple.desktopservices
+    key: DSDontWriteNetworkStores
+    type: bool
+    value: true
+
+  - domain: com.apple.desktopservices
+    key: DSDontWriteUSBStores
+    type: bool
+    value: true
+
+  #
+  # Key
+  #
+  - domain: NSGlobalDomain
+    key: InitialKeyRepeat
+    type: int
+    value: 15
+
+  - domain: NSGlobalDomain
+    key: KeyRepeat
+    type: int
+    value: 2
+
+  #
+  # Menu
+  #
+  #
+  # Menu : Clock
+  #
+  - domain: com.apple.menuextra.clock
+    key: DateFormat
+    type: string
+    value: "EEE MMM d  HH:mm:ss"
+
+  - domain: com.apple.menuextra.clock
+    key: FlashDateSeparators
+    type: bool
+    value: false
+
+  - domain: com.apple.menuextra.clock
+    key: IsAnalog
+    type: bool
+    value: false
+
+  #
+  # Menu : Battery
+  #
+  - domain: com.apple.menuextra.battery
+    key: DidShowFDEWarning
+    type: bool
+    value: true
+
+  - domain: com.apple.menuextra.battery
+    key: ShowPercent
+    type: string
+    value: "YES"
+
+  #
+  # Menu : Extra
+  #
+  # Currently, type array case doesn't work because there is a bug on ansible vesion 2.1.0
+  # - domain: com.apple.systemuiserver
+  #   key: menuExtras
+  #   type: array
+  # value: "/System/Library/CoreServices/Menu Extras/Displays.menu", "/System/Library/CoreServices/Menu Extras/Bluetooth.menu", "/Applications/Utilities/Keychain Access.app/Contents/Resources/Keychain.menu", "/System/Library/CoreServices/Menu Extras/Volume.menu", "/System/Library/CoreServices/Menu Extras/AirPort.menu", "/System/Library/CoreServices/Menu Extras/TextInput.menu", "/System/Library/CoreServices/Menu Extras/Battery.menu", "/System/Library/CoreServices/Menu Extras/Clock.menu"
+
+  #
+  # Screen
+  #
+  - domain: com.apple.screensaver
+    key: askForPassword
+    type: int
+    value: 1
+
+  - domain: com.apple.screensaver
+    key: askForPasswordDelay
+    type: float
+    value: 0
+
+  - domain: com.apple.screensaver
+    key: tokenRemovalAction
+    type: int
+    value: 0
+
+  - domain: com.apple.screensaver
+    key: showClock
+    type: int
+    value: 1
+
+  #
+  # Screencapture
+  #
+  - domain: com.apple.screencapture
+    key: location
+    type: string
+    value: "{{ ansible_env.HOME }}/ScreenCapture/"
+
+  - domain: com.apple.screencapture
+    key: name
+    type: string
+    value: Capture
+
+  - domain: com.apple.screencapture
+    key: type
+    type: string
+    value: png

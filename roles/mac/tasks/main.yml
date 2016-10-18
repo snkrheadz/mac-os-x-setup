@@ -1,0 +1,61 @@
+---
+- name: Check if iterm2 config is differ
+  shell: |
+    diff <(plutil -convert binary1 -o - ./com.googlecode.iterm2.plist | md5 -q) <(md5 -q ~/Library/Preferences/com.googlecode.iterm2.plist)
+  args:
+    chdir: roles/mac/files/Library/Preferences
+    executable: /bin/bash
+  register: diff_result
+  always_run: true
+  failed_when: false
+  changed_when: diff_result.rc != 0
+  notify:
+    - Restore iterm2 configuration
+
+- name: Install iterm2 imgls and imgcat
+  get_url: url=https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgls dest=/usr/local/bin/imgls mode=0755
+  get_url: url=https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgcat dest=/usr/local/bin/imgcat mode=0755
+
+- name: Install ricty fonts
+  shell: |
+    cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts && fc-cache -vf
+  args:
+    creates: "{{ ansible_user_dir }}/Library/Fonts/Ricty-Bold.ttf"
+
+- name: Setup OS X defaults
+  osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+    state: present
+  with_items:
+    - "{{ osx_defaults }}"
+
+- name: Setup OS X defaults which use array values and restart Finder, Dock and Menubar
+  script: mac.sh
+
+- name: Install ruby versions by rbenv
+  shell: |
+    rbenv init
+    rbenv version-name > ~/.rbenv/version
+    rbenv install "{{ item }}"
+  args:
+    executable: /bin/bash
+  ignore_errors: True
+  with_items:
+    - 2.1.5
+    - 2.2.2
+    - 2.2.5
+    - 2.3.0
+    - 2.3.1
+
+- name: Setup global ruby version t0 2.3.1 by rbenv
+  shell: |
+    rbenv global 2.3.1
+
+- name: Install gem files ( bundler and rails )
+  gem: name="{{ item }}" state=latest
+  with_items:
+    - bundler
+    - rails

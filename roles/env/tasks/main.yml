@@ -1,0 +1,31 @@
+---
+- name: Make .nvm directory
+  shell: |
+    mkdir ~/.nvm
+- name: Make alias of nvm
+  shell: |
+    ln -s (brew --prefix nvm)/nvm.sh ~/.nvm/nvm.sh
+- name: Copy envs
+  shell: |
+    cp -f {{ item.file }} ~/{{ item.file }}
+  args:
+    chdir: roles/env/files
+    executable: /bin/bash
+  with_items:
+    - "{{ env_files }}"
+
+- name: Clone git repositories
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+    accept_hostkey: yes
+  with_items:
+    - "{{ git_repositories }}"
+
+- name: Change login shell to /usr/local/bin/fish
+  become: yes
+  become_method: sudo
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /usr/local/bin/fish
+    state: present

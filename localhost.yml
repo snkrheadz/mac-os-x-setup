@@ -1,0 +1,9 @@
+---
+- name: Set up my MacBook
+  hosts: localhost
+  connection: local
+  become: False
+  roles:
+    - { role: homebrew-cask, tags: [ homebrew-cask ] }
+    - { role: env, tags: [ env ] }
+    - { role: mac, tags: [ mac ] }

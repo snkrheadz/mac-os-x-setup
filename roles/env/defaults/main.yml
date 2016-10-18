@@ -1,0 +1,17 @@
+---
+env_files:
+  - file: .bash_profile
+  - file: .bashrc
+  - file: .gitignore_global
+  - file: .inputrc
+  - file: .vimrc
+  - file: .config/fish/config.fish
+  - file: .config/omf/bundle
+  - file: .config/omf/init.fish
+  - file: .config/omf/theme
+
+ghq_root: "{{ ansible_user_dir }}/.ghq/github.com"
+
+git_repositories:
+  - { repo: "https://github.com/akinrt/random_logic.git", dest: "{{ ghq_root }}/akinrt/random_logic" }
+  - { repo: "https://github.com/akinrt/gulp-ruby-haml-format-option.git", dest: "{{ ghq_root }}/akinrt/gulp-ruby-haml-format-option" }

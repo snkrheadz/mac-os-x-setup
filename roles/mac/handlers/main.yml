@@ -1,0 +1,19 @@
+---
+- name: Restart Dock
+  shell: |
+    killall Dock
+
+- name: Restart Finder
+  shell: |
+    killall Finder
+
+- name: Restart SystemUIServer
+  shell: |
+    killall SystemUIServer
+
+- name: Restore iterm2 configuration
+  shell: |
+    plutil -convert binary1 -o "{{ ansible_user_dir }}/Library/Preferences/com.googlecode.iterm2.plist" ./com.googlecode.iterm2.plist
+  args:
+    chdir: roles/mac/files/Library/Preferences
+    
