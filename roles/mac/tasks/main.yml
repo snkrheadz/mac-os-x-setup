@@ -12,8 +12,10 @@
   notify:
     - Restore iterm2 configuration
 
-- name: Install iterm2 imgls and imgcat
+- name: Install iterm2 imgls
   get_url: url=https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgls dest=/usr/local/bin/imgls mode=0755
+
+- name: Install iterm2 imgcat
   get_url: url=https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgcat dest=/usr/local/bin/imgcat mode=0755
 
 - name: Install ricty fonts

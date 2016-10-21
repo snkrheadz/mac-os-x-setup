@@ -2,6 +2,26 @@
 
 This is a provisioning for my MacBook which is designed from my MacBook environment.
 
+## Syntax check
+
+```sh
+ansible-playbook site.yml --syntax-check
+```
+
+## List tasks
+
+```sh
+ansible-playbook site.yml --list-tasks
+```
+
+## Check
+
+Run command below and type your sudo pass, because task `Change login shell to /usr/local/bin/fish` use option `become_method: sudo` .
+
+```sh
+ansible-playbook site.yml --check --ask-sudo-pass
+```
+
 ## Workflow
 
 ** Shell Script **
@@ -9,28 +29,35 @@ This is a provisioning for my MacBook which is designed from my MacBook environm
 - Install Homebrew packages
 - Install NeoBundle
 - Install Oh My Fish
-
-** Ansible Playbook **
-- Setup Cask and install apps
-  - Tap Homebrew Cask
-  - Install/Upgrade Homebrew Cask
-  - Tap external Homebrew Cask repositories
-  - Install/Upgrade Homebrew Cask packages
-- Setup env
-  - Copy env files
-  - Clone git repo
-  - Change login shell to fish shell
-- Update OSX setting
-  - Setup iterm2 config
-  - Install iterm2 images binaries
-  - Install ricty fonts
-  - Setup OS X defaults
-  - Setup OS X defaults which use array values and restart Finder, Dock and Menubar
-  - Install ruby versions by rbenv
-  - Setup global ruby version t0 2.3.1 by rbenv
-  - Install gem files ( bundler and rails )
+- Run ansible-playbook
 - Install atom packages
 
+** Ansible Playbook task lists **
+
+```
+playbook: site.yml
+
+  play #1 (localhost): Set up my MacBook	TAGS: []
+    tasks:
+      homebrew-cask : Tap Homebrew Cask	TAGS: [homebrew-cask]
+      homebrew-cask : Install/Upgrade Homebrew Cask	TAGS: [homebrew-cask]
+      homebrew-cask : Tap external Homebrew Cask repositories	TAGS: [homebrew-cask]
+      homebrew-cask : Install/Upgrade Homebrew Cask packages	TAGS: [homebrew-cask]
+      env : Make .nvm directory	TAGS: [env]
+      env : Make alias of nvm	TAGS: [env]
+      env : Copy envs	TAGS: [env]
+      env : Clone git repositories	TAGS: [env]
+      env : Change login shell to /usr/local/bin/fish	TAGS: [env]
+      mac : Check if iterm2 config is differ	TAGS: [mac]
+      mac : Install iterm2 imgls	TAGS: [mac]
+      mac : Install iterm2 imgcat	TAGS: [mac]
+      mac : Install ricty fonts	TAGS: [mac]
+      mac : Setup OS X defaults	TAGS: [mac]
+      mac : Setup OS X defaults which use array values and restart Finder, Dock and Menubar	TAGS: [mac]
+      mac : Install ruby versions by rbenv	TAGS: [mac]
+      mac : Setup global ruby version t0 2.3.1 by rbenv	TAGS: [mac]
+      mac : Install gem files ( bundler and rails )	TAGS: [mac]
+```
 
 ## Restart shell as bash
 
@@ -106,3 +133,8 @@ roles/
     monitoring/           # ""
     fooapp/               # ""
 ```
+
+## Link
+
+- [Ansible Documentation](http://docs.ansible.com/ansible/index.html)
+- [ansible playbook コマンド](https://github.com/yteraoka/ansible-tutorial/wiki/ansible-playbook%20%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89)
