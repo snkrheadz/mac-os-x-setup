@@ -47,6 +47,7 @@ ghostscript
 gibo
 git
 git-flow
+git-secrets
 glib
 gmp
 gnupg
