@@ -10,7 +10,7 @@ source $OMF_PATH/init.fish
 set -x PATH /usr/local/sbin $PATH
 
 # Homebrew
-# set -x HOMEBREW_GITHUB_API_TOKEN 
+# set -x HOMEBREW_GITHUB_API_TOKEN
 
 # Elasticsearch
 # set -x PATH /usr/local/Cellar/elasticsearch/2.1.1/libexec/bin $PATH
@@ -28,10 +28,6 @@ status --is-interactive; and . (rbenv init -|psub)
 
 # nvm
 set -x NVM_DIR ~/.nvm
-
-# avn
-# someday if nvm support fish shell :)
-# source $HOME/.avn/bin/avn.sh
 
 # direnv
 eval (direnv hook fish)
