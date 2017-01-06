@@ -10,11 +10,11 @@ source $OMF_PATH/init.fish
 set -x PATH /usr/local/sbin $PATH
 
 # Homebrew
-# set -x HOMEBREW_GITHUB_API_TOKEN
+set -x HOMEBREW_GITHUB_API_TOKEN 5035fbd5f3cb0023ef028601fb76934e9eaa5f84
 
 # Elasticsearch
 # set -x PATH /usr/local/Cellar/elasticsearch/2.1.1/libexec/bin $PATH
-set -x PATH /usr/local/Cellar/elasticsearch17/1.7.4/bin $PATH
+set -x PATH /usr/local/Cellar/elasticsearch@1.7/1.7.6/bin $PATH
 
 # Python
 set -x PYTHONPATH /usr/local/lib/python2.7/site-packages/
