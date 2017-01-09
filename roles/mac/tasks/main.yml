@@ -51,10 +51,13 @@
     - 2.2.5
     - 2.3.0
     - 2.3.1
+    - 2.3.2
+    - 2.3.3
+    - 2.4.0
 
 - name: Setup global ruby version t0 2.3.1 by rbenv
   shell: |
-    rbenv global 2.3.1
+    rbenv global 2.3.3
 
 - name: Install gem files ( bundler and rails )
   gem: name="{{ item }}" state=latest
