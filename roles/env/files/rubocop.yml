@@ -1,0 +1,45 @@
+AllCops:
+  DisplayCopNames: yes
+  TargetRubyVersion: 2.2
+
+Metrics:
+  Enabled: no
+
+Rails:
+  Enabled: no
+
+Style/Alias:
+  Enabled: no
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/BracesAroundHashParameters:
+  Enabled: no
+
+Style/ClassCheck:
+  EnforcedStyle: kind_of?
+
+Style/Documentation:
+  Enabled: no
+
+Style/EmptyElse:
+  EnforcedStyle: empty
+
+Style/IndentHash:
+  EnforcedStyle: consistent
+
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Style/PredicateName:
+  Enabled: no
+
+Style/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: space
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
