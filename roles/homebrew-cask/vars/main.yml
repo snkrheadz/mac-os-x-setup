@@ -45,3 +45,4 @@ homebrew_cask_packages:
   - gopro-studio
   - duet
   - psequel
+  - jd-gui
