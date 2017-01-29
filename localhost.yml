@@ -1,5 +1,5 @@
 ---
-- name: Set up my MacBook
+- name: set up my macbook
   hosts: localhost
   connection: local
   become: False

@@ -16,7 +16,7 @@ ansible-playbook site.yml --list-tasks
 
 ## Check
 
-Run command below and type your sudo pass, because task `Change login shell to /usr/local/bin/fish` use option `become_method: sudo` .
+Run command below and type your sudo pass, because task `Change login shell to fish` use option `become_method: sudo` .
 
 ```sh
 ansible-playbook site.yml --check --ask-sudo-pass

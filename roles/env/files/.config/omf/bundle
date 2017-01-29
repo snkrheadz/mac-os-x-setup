@@ -1,4 +1,6 @@
+package rbenv
 package exenv
 package nvm
 package peco
 theme bobthefish
+theme clearance

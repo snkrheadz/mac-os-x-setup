@@ -20,13 +20,13 @@ convmv
 cowsay
 curl
 czmq
-dinghy
 direnv
 dirmngr
 dnsmasq
 docker
 docker-compose
 docker-machine
+doxygen
 eigen
 elasticsearch@1.7
 elixir
@@ -121,7 +121,6 @@ rbenv
 rbenv-gemset
 readline
 redis
-ricty
 ruby
 ruby-build
 shared-mime-info

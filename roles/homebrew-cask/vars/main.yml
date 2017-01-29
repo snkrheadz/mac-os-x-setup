@@ -12,11 +12,11 @@ homebrew_cask_repositories:
 #
 # state choices: [present, absent, installed, uninstalled] (default: present)
 homebrew_cask_packages:
-  - firefox-ja
-  - flash
+  - firefox
+  - flash-player
   - google-chrome
   - iterm2
-  - java6
+  - java
   - slack
   - skype
   - dropbox
@@ -41,8 +41,9 @@ homebrew_cask_packages:
   - namechanger
   - imageoptim
   - libreoffice
-  - gopro
-  - gopro-studio
+  # gopro apps seem like removed from brew case
+  # - gopro
+  # - gopro-studio
   - duet
   - psequel
   - jd-gui
