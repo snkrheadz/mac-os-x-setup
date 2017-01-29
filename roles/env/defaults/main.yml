@@ -2,6 +2,7 @@
 env_files:
   - file: .bash_profile
   - file: .bashrc
+  - file: .gitconfig
   - file: .gitignore_global
   - file: .inputrc
   - file: .vimrc
