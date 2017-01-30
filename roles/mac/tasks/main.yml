@@ -64,4 +64,5 @@
     executable: ~/.rbenv/shims/gem
   with_items:
     - bundler
+    - rsense
     - rails
