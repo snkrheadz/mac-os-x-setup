@@ -1,11 +1,30 @@
+---
 AllCops:
   DisplayCopNames: yes
-  TargetRubyVersion: 2.2
+  TargetRubyVersion: 2.3
+  Exclude:
+    - "bin/*"
+    - "db/schema.rb"
 
 Metrics:
   Enabled: no
 
 Rails:
+  Enabled: no
+
+Bundler/OrderedGems:
+  Enabled: no
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: no
+
+Lint/UnusedMethodArgument: # unreliable with keyword arguments
+  Enabled: no
+
+Lint/UselessAccessModifier:
+  Enabled: no
+
+Style/AccessorMethodName:
   Enabled: no
 
 Style/Alias:
@@ -14,7 +33,13 @@ Style/Alias:
 Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 
+Style/AsciiComments:
+  Enabled: no
+
 Style/BracesAroundHashParameters:
+  Enabled: no
+
+Style/ClassAndModuleChildren:
   Enabled: no
 
 Style/ClassCheck:
@@ -23,8 +48,24 @@ Style/ClassCheck:
 Style/Documentation:
   Enabled: no
 
+Style/DoubleNegation:
+  Enabled: no
+
 Style/EmptyElse:
   EnforcedStyle: empty
+
+Style/FormatString:
+  Enabled: no
+
+Style/FrozenStringLiteralComment:
+  Enabled: no
+
+Style/GlobalVars:
+  AllowedVariables:
+    - '$redis'
+
+Style/GuardClause:
+  Enabled: no
 
 Style/IndentHash:
   EnforcedStyle: consistent
@@ -32,7 +73,22 @@ Style/IndentHash:
 Style/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
+Style/NumericPredicate:
+  Enabled: no
+
 Style/PredicateName:
+  Enabled: no
+
+Style/PreferredHashMethods: # tries to use .has_key? for ActiveModel::Errors and other hash-like objects
+  Enabled: no
+
+Style/RedundantParentheses: # cause infinite correction loop in some cases.
+  Enabled: no
+
+Style/RegexpLiteral:
+  Enabled: no
+
+Style/SingleLineBlockParams:
   Enabled: no
 
 Style/SpaceAroundEqualsInParameterDefault:
@@ -42,4 +98,4 @@ Style/StringLiterals:
   EnforcedStyle: double_quotes
 
 Style/TrailingCommaInLiteral:
-  EnforcedStyleForMultiline: comma
+  EnforcedStyleForMultiline: consistent_comma

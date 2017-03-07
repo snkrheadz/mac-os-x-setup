@@ -1,65 +1,71 @@
 " 挙動を vi 互換ではなく、Vim のデフォルト設定にする
 set nocompatible
-" 一旦ファイルタイプ関連を無効化する
-filetype off
 
-""""""""""""""""""""""""""""""
-" プラグインのセットアップ
-""""""""""""""""""""""""""""""
-if has('vim_starting')
-  set nocompatible               " Be iMproved
+" Vim起動完了時にインストール
+augroup PluginInstall
+  autocmd!
+  autocmd VimEnter * if dein#check_install() | call dein#install() | endif
+augroup END
 
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+" 各プラグインをインストールするディレクトリ
+let s:plugin_dir = expand('~/.vim/bundle/')
+" dein.vimをインストールするディレクトリをランタイムパスへ追加
+let s:dein_dir = s:plugin_dir . 'repos/github.com/Shougo/dein.vim'
+execute 'set runtimepath+=' . s:dein_dir
+
+" dein.vimがまだ入ってなければ 最初に`git clone`
+if !isdirectory(s:dein_dir)
+  call mkdir(s:dein_dir, 'p')
+  silent execute printf('!git clone %s %s', 'https://github.com/Shougo/dein.vim', s:dein_dir)
 endif
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+if dein#load_state(s:plugin_dir)
+  call dein#begin(s:plugin_dir)
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+  " ここからインストールするプラグインを書いていく
+  call dein#add('Shougo/dein.vim')
 
-" ファイルオープンを便利に
-NeoBundle 'Shougo/unite.vim'
-" Unite.vimで最近使ったファイルを表示できるようにする
-NeoBundle 'Shougo/neomru.vim'
-" ファイルをtree表示してくれる
-NeoBundle 'scrooloose/nerdtree'
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
-" Gitを便利に使う
-NeoBundle 'tpope/vim-fugitive'
+  " インストール後ビルドする場合
+  call dein#add('Shougo/vimproc.vim', {
+        \ 'build': {
+        \     'mac': 'make -f make_mac.mak',
+        \     'linux': 'make',
+        \     'unix': 'gmake',
+        \    },
+        \ })
 
-" Rails向けのコマンドを提供する
-NeoBundle 'tpope/vim-rails'
-" Ruby向けにendを自動挿入してくれる
-NeoBundle 'tpope/vim-endwise'
+  " 条件によって使ったり使わなかったり制御する場合
+  call dein#add('Shougo/neocomplete.vim', {
+        \ 'if' : has('lua')
+        \ })
 
-" コメントON/OFFを手軽に実行
-NeoBundle 'tomtom/tcomment_vim'
-" シングルクオートとダブルクオートの入れ替え等
-NeoBundle 'tpope/vim-surround'
+  " 依存関係がある場合
+  call dein#add('Shougo/unite.vim')
+  call dein#add('ujihisa/unite-colorscheme', {'depends' : 'Shougo/unite.vim'})
 
-" インデントに色を付けて見やすくする
-NeoBundle 'nathanaelkane/vim-indent-guides'
-" ログファイルを色づけしてくれる
-NeoBundle 'vim-scripts/AnsiEsc.vim'
-" 行末の半角スペースを可視化(うまく動かない？)
-NeoBundle 'bronson/vim-trailing-whitespace'
-" less用のsyntaxハイライト
-NeoBundle 'KohPoll/vim-less'
+  call dein#add('Shougo/neomru.vim')
+  " ファイルをtree表示してくれる
+  call dein#add('scrooloose/nerdtree')
+  nnoremap <silent><C-e> :NERDTreeToggle<CR>
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('tpope/vim-rails')
+  " call dein#add('tpope/vim-rails', {'on_ft' : 'ruby'})
+  call dein#add('tpope/vim-endwise')
+  call dein#add('tomtom/tcomment_vim')
+  call dein#add('tpope/vim-surround')
+  call dein#add('nathanaelkane/vim-indent-guides')
+  call dein#add('vim-scripts/AnsiEsc.vim')
+  call dein#add('bronson/vim-trailing-whitespace')
+  call dein#add('KohPoll/vim-less')
 
-" 余談: neocompleteは合わなかった。ctrl+pで補完するのが便利
 
-call neobundle#end()
+  call dein#add('Shougo/vimfiler', {'lazy' : 1})
 
-" Required:
+  " dein.vimで管理して更新だけするリポジトリ（NeoBundleFetchとおなじ）
+  call dein#add('jszakmeister/markdown2ctags', {'rtp': ''})
+endif
+
 filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
 " 各種オプションの設定
