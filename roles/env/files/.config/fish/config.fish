@@ -60,10 +60,10 @@ set -g theme_display_ruby yes
 # set -g theme_title_use_abbreviated_path yes
 set -g theme_date_format "+%a %H:%M"
 # set -g theme_avoid_ambiguous_glyphs yes
-set -g theme_powerline_fonts no
+set -g theme_powerline_fonts yes
 # set -g theme_nerd_fonts yes
 # set -g theme_show_exit_status yes
 # set -g default_user your_normal_user
-# set -g theme_color_scheme solarized-dark
+set -g theme_color_scheme solarized-dark
 # set -g fish_prompt_pwd_dir_length 0
 # set -g theme_project_dir_length 1
