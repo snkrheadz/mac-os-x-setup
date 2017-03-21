@@ -30,6 +30,10 @@ function gdeletemergedcurrent --description 'Delete all local branches that is a
   command git branch --merged | grep -v "\*" | grep -v "master" | xargs -n 1 git branch -d
 end
 
+function gitlog --description 'Show git log in a nice format'
+  git log --no-merges --date=short --pretty='format:%C(yellow)%h %C(green)%cd %C(blue)%an%C(red)%d %C(reset)%s'
+end
+
 function pathlist --description 'Show a list of the paths on $PATH'
   for val in $PATH
     echo "$val"
