@@ -28,7 +28,7 @@ docker-compose
 docker-machine
 doxygen
 eigen
-elasticsearch@1.7
+elasticsearch
 elixir
 elixir-build
 emacs
