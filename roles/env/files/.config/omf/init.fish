@@ -81,3 +81,8 @@ end
 function imginfo --description 'print image on iterm2 with its pixelHeight and pixelWidth'
   imgcat $argv[1]; sips --getProperty pixelHeight --getProperty pixelWidth $argv[1]
 end
+
+function gitakinrt --description 'update local config for akinrt'
+  git config --local user.email aki.d.sc@gmail.com
+  git config --local user.name akinrt
+end
