@@ -86,3 +86,7 @@ function gitakinrt --description 'update local config for akinrt'
   git config --local user.email aki.d.sc@gmail.com
   git config --local user.name akinrt
 end
+
+function rupgrade --description 'shortcut command for upgrade rbenv and ruby-build depends on homebrew'
+  brew upgrade rbenv ruby-build
+end
