@@ -19,6 +19,9 @@
   with_items:
     - "{{ git_repositories }}"
 
+- name: install git-foresta
+  get_url: url=https://github.com/takaaki-kasai/git-foresta/raw/master/git-foresta dest=~/bin/git-foresta mode=0755
+
 - name: change login shell to fish
   become: yes
   become_method: sudo

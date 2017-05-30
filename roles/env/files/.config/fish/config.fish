@@ -6,17 +6,18 @@ set -q XDG_DATA_HOME
 # Load oh-my-fish configuration.
 source $OMF_PATH/init.fish
 
-# My settings
+# bin
+set -x PATH ~/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 
-# Elasticsearch
+# elasticsearch
 # set -x PATH /usr/local/Cellar/elasticsearch/2.1.1/libexec/bin $PATH
 set -x PATH /usr/local/Cellar/elasticsearch@1.7/1.7.6/bin $PATH
 
-# Python
+# python
 set -x PYTHONPATH /usr/local/lib/python2.7/site-packages/
 
-# Git
+# git
 set -x PATH /usr/local/share/git-core/contrib/diff-highlight $PATH
 
 # rbenv

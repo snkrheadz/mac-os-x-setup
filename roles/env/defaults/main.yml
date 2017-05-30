@@ -16,3 +16,7 @@ ghq_root: "{{ ansible_user_dir }}/.ghq/github.com"
 git_repositories:
   - { repo: "https://github.com/akinrt/random_logic.git", dest: "{{ ghq_root }}/akinrt/random_logic" }
   - { repo: "https://github.com/akinrt/gulp-ruby-haml-format-option.git", dest: "{{ ghq_root }}/akinrt/gulp-ruby-haml-format-option" }
+  - { repo: "https://github.com/akinrt/omise_test_cards.git", dest: "{{ ghq_root }}/akinrt/omise_test_cards" }
+  - { repo: "https://github.com/akinrt/mac-os-x-setup.git", dest: "{{ ghq_root }}/akinrt/mac-os-x-setup" }
+  - { repo: "https://github.com/akinrt/omise-webhook.git", dest: "{{ ghq_root }}/akinrt/omise-webhook" }
+  - { repo: "https://github.com/akinrt/freshdesk-ruby.git", dest: "{{ ghq_root }}/akinrt/freshdesk-ruby" }

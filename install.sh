@@ -10,15 +10,15 @@ if ! which -s xcode-select; then
   return
 fi
 
-# load Packages
-. brew_packages.sh
-
 # install Homebrew
 if ! which -s brew; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# install Pakages
+# load packages
+. brew_packages.sh
+
+# install pakages
 for package in $BREW_PACKAGES; do
   # brew install $package
   if brew list -1 | grep -q "^$(basename $package)"; then
