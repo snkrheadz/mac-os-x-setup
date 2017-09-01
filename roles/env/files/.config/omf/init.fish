@@ -90,3 +90,7 @@ end
 function rupgrade --description 'shortcut command for upgrade rbenv and ruby-build depends on homebrew'
   brew upgrade rbenv ruby-build
 end
+
+function fpeco --description 'search previously used command through peco'
+  history --search --contains $argv[1] | peco
+end
