@@ -12,54 +12,52 @@ homebrew_cask_repositories:
 #
 # state choices: [present, absent, installed, uninstalled] (default: present)
 homebrew_cask_packages:
+  - 1password
+  - appcleaner
+  - atom
+  - betterzipql
+  - cyberduck
+  - dropbox
+  - duet
+  - evernote
   - firefox
   - flash-player
-  - google-chrome
+  - geekbench
+  - genymotion
+  - hex-fiend
+  - imageoptim
+  - insomnia
   - iterm2
+  - jasper
   - java
-  - slack
-  - skype
-  - dropbox
-  - evernote
+  - jd-gui
+  - kindle
+  - libreoffice
   - macvim
-  - atom
+  - macwinzipper
+  - namechanger
+  - onyx
+  - openoffice
+  - poedit
+  - psequel
+  - qlcolorcode
+  - qlimagesize
+  - qlmarkdown
+  - qlprettypatch
+  - qlstephen
+  - qlvideo
+  - quicklook-csv
+  - quicklook-json
+  - quicklookase
+  - sketch
+  - skype
   - sublime-text
+  - suspicious-package
+  - the-unarchiver
+  - totalspaces
   - vagrant
   - virtualbox
-  - genymotion
-  - 1password
-  - hex-fiend
-  - the-unarchiver
-  - onyx
-  - poedit
-  - sketch
-  - zeplin
-  - vnc-viewer
   - viscosity
-  - appcleaner
-  - cyberduck
-  - namechanger
-  - imageoptim
-  - libreoffice
-  # gopro apps seem like removed from brew case
-  # - gopro
-  # - gopro-studio
-  - duet
-  - psequel
-  - jd-gui
-  - macwinzipper
-  - insomnia
-  - jasper
-  # quick look plugins
-  - qlcolorcode
-  - qlstephen
-  - qlmarkdown
-  - quicklook-json
-  - qlprettypatch
-  - quicklook-csv
-  - betterzipql
-  - qlimagesize
+  - vnc-viewer
   - webpquicklook
-  - suspicious-package
-  - quicklookase
-  - qlvideo
+  - zeplin
