@@ -11,7 +11,6 @@ axel
 bash-completion
 binutils
 boost
-boot2docker
 cairo
 cask
 chromedriver
@@ -24,9 +23,6 @@ czmq
 direnv
 dirmngr
 dnsmasq
-docker
-docker-compose
-docker-machine
 doxygen
 eigen
 elixir
@@ -59,6 +55,7 @@ go
 gobject-introspection
 goenv
 gpg-agent
+graphite2
 graphviz
 harfbuzz
 heroku
@@ -125,7 +122,7 @@ pngquant
 postgresql
 pth
 pyenv
-python
+python3
 rbenv
 readline
 redis

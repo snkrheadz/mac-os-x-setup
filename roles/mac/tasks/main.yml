@@ -31,6 +31,18 @@
 - name: setup OS X defaults which use array values and restart Finder, Dock and Menubar
   script: mac.sh
 
+- name: install python
+  shell: pyenv install "{{ item }}"
+  args:
+    executable: /bin/bash
+  ignore_errors: yes
+  with_items:
+    - 2.7.14
+    - 3.6.2
+
+- name: set global python versions
+  shell: pyenv global 2.7.14 3.6.2
+
 - name: init rbenv
   shell: rbenv init
   ignore_errors: yes
@@ -49,13 +61,14 @@
     - 2.3.2
     - 2.3.3
     - 2.4.0
+    - 2.4.1
 
 - name: rehash
   shell: rbenv rehash
 
-- name: set global ruby version 2.3.1
+- name: set global ruby version 2.4.1
   shell: |
-    rbenv global 2.3.1
+    rbenv global 2.4.1
 
 - name: install gem
   gem:

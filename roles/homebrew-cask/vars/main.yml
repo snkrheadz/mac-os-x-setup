@@ -17,6 +17,7 @@ homebrew_cask_packages:
   - atom
   - betterzipql
   - cyberduck
+  - docker
   - dropbox
   - duet
   - evernote
