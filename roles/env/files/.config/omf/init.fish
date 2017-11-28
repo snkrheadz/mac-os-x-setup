@@ -99,3 +99,11 @@ function fish_user_key_bindings
   bind \cr 'peco_select_history (commandline -b)'
   bind \c] peco_select_ghq_repository
 end
+
+function mergeapp --description 'open FileMerge.app in Xcode.app'
+  open /Applications/Xcode.app/Contents/Applications/FileMerge.app
+end
+
+function pip3freeze --description 'create requirements.txt'
+  pip3 freeze > requirements.txt
+end

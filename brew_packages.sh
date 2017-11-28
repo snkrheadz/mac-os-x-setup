@@ -5,7 +5,9 @@ BREW_PACKAGES="
 ack
 adns
 ansible
+asciidoc
 autoconf
+automake
 awscli
 axel
 bash-completion
@@ -13,16 +15,18 @@ binutils
 boost
 cairo
 cask
+cask-repair
 chromedriver
 cmake
 cocot
 convmv
-cowsay
 curl
 czmq
 direnv
 dirmngr
 dnsmasq
+docbook
+docbook-xsl
 doxygen
 eigen
 elixir
@@ -49,6 +53,7 @@ git-flow
 git-secrets
 glib
 gmp
+gnu-getopt
 gnupg
 gnutls
 go
@@ -59,7 +64,10 @@ graphite2
 graphviz
 harfbuzz
 heroku
+heroku-node
 highlight
+hr
+htop
 htop-osx
 hub
 hugo
@@ -103,7 +111,6 @@ node
 npth
 numpy
 nvm
-nyancat
 oniguruma
 openexr
 openssl
@@ -122,6 +129,7 @@ pngquant
 postgresql
 pth
 pyenv
+python
 python3
 rbenv
 readline
@@ -145,6 +153,7 @@ wget
 wifi-password
 wxmac
 x264
+xmlto
 xvid
 xz
 yarn

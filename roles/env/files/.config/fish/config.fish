@@ -32,9 +32,6 @@ source (goenv init - | psub)
 # homebrew cask option
 set -x HOMEBREW_CASK_OPTS --appdir=/Applications
 
-# Homebrew
-# set -x HOMEBREW_GITHUB_API_TOKEN "TOKEN HERE"
-
 # gcloud
 # The next line updates PATH for the Google Cloud SDK.
 bass source '/Users/akira/bin/google-cloud-sdk/path.bash.inc'

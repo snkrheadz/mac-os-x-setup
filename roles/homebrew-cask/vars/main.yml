@@ -13,11 +13,11 @@ homebrew_cask_repositories:
 # state choices: [present, absent, installed, uninstalled] (default: present)
 homebrew_cask_packages:
   - 1password
+  - anaconda
   - appcleaner
   - atom
   - betterzipql
   - cyberduck
-  - docker
   - dropbox
   - duet
   - evernote
@@ -32,13 +32,12 @@ homebrew_cask_packages:
   - jasper
   - java
   - jd-gui
-  - kindle
   - libreoffice
   - macvim
   - macwinzipper
   - namechanger
+  - ngrok
   - onyx
-  - openoffice
   - poedit
   - psequel
   - qlcolorcode
@@ -50,7 +49,6 @@ homebrew_cask_packages:
   - quicklook-csv
   - quicklook-json
   - quicklookase
-  - sketch
   - skype
   - sublime-text
   - suspicious-package
@@ -59,6 +57,7 @@ homebrew_cask_packages:
   - vagrant
   - virtualbox
   - viscosity
+  - visual-studio-code
   - vnc-viewer
   - webpquicklook
   - zeplin
