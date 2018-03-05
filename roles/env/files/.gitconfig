@@ -19,6 +19,14 @@
 	compactionHeuristic = true
 	renames = true
 [alias]
+	st = status
+	co = checkout
+	br = branch
+	cm = commit
+	df = diff
+	gr = grep
+	ft = fetch
+	pl = pull
 	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 	graph-mini = log --graph --decorate --oneline
