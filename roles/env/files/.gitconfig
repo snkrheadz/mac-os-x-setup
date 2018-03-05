@@ -1,6 +1,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
+	attributesfile = ~/.gitattributes_global
 [user]
 	name = akinrt
 	email = aki.d.sc@gmail.com
@@ -16,6 +17,16 @@
 	diff = diff-highlight | less
 [diff]
 	compactionHeuristic = true
+	renames = true
 [alias]
 	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+	graph-mini = log --graph --decorate --oneline
+	log1 = log --stat --decorate --find-renames
+	log2 = log --graph --decorate --oneline
+	log3 = log -p
+	status1 = status --short --branch
+[credential]
+	helper = osxkeychain
+[color]
+	ui = auto
