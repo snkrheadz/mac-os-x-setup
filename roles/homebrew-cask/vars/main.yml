@@ -17,27 +17,29 @@ homebrew_cask_packages:
   - appcleaner
   - atom
   - betterzipql
+  - chatwork
   - cyberduck
   - dropbox
   - duet
-  - evernote
   - firefox
-  - flash-player
   - geekbench
   - genymotion
+  - gyazo
   - hex-fiend
+  - hyper
   - imageoptim
   - insomnia
   - iterm2
-  - jasper
   - java
   - jd-gui
+  - kindle
   - libreoffice
   - macvim
   - macwinzipper
   - namechanger
   - ngrok
   - onyx
+  - openoffice
   - poedit
   - psequel
   - qlcolorcode
@@ -49,6 +51,7 @@ homebrew_cask_packages:
   - quicklook-csv
   - quicklook-json
   - quicklookase
+  - react-studio
   - skype
   - sublime-text
   - suspicious-package
