@@ -18,12 +18,10 @@ homebrew_cask_packages:
   - atom
   - betterzipql
   - chatwork
-  - cyberduck
   - dropbox
   - duet
   - firefox
   - geekbench
-  - genymotion
   - gyazo
   - hex-fiend
   - hyper
@@ -34,7 +32,6 @@ homebrew_cask_packages:
   - jd-gui
   - kindle
   - libreoffice
-  - macvim
   - macwinzipper
   - namechanger
   - ngrok
@@ -53,14 +50,13 @@ homebrew_cask_packages:
   - quicklookase
   - react-studio
   - skype
-  - sublime-text
   - suspicious-package
   - the-unarchiver
-  - totalspaces
   - vagrant
   - virtualbox
   - viscosity
   - visual-studio-code
   - vnc-viewer
   - webpquicklook
+  - wireshark
   - zeplin

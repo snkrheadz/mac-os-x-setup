@@ -24,7 +24,8 @@ call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 call dein#add('Shougo/unite.vim')
 " Unite.vimで最近使ったファイルを表示できるようにする
 call dein#add('Shougo/neomru.vim')
-
+" ツリー表示
+call dein#add('scrooloose/nerdtree')
 " カラースキームmolokai
 call dein#add('tomasr/molokai')
 " ステータスラインの表示内容強化

@@ -7,3 +7,6 @@ Gemfile.local
 Gemfile.local.lock
 .todo_memo
 .tags*
+.gemrc
+.vscode/
+

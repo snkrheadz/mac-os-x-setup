@@ -22,13 +22,6 @@ source (pyenv init - | psub)
 # go
 source (goenv init - | psub)
 
-# omf install lists
-# exenv
-# foreign-env
-# nvm
-# peco
-# rbenv
-
 # homebrew cask option
 set -x HOMEBREW_CASK_OPTS --appdir=/Applications
 

@@ -1,7 +1,8 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
-	attributesfile = ~/.gitattributes_global
+    attributesfile = ~/.gitattributes_global
+    pager = less -r
 [user]
 	name = akinrt
 	email = aki.d.sc@gmail.com
@@ -12,9 +13,9 @@
 	smudge = git-lfs smudge %f
 	required = true
 [pager]
-	log = diff-highlight | less
-	show = diff-highlight | less
-	diff = diff-highlight | less
+	log = diff-highlight | less -r
+	show = diff-highlight | less -r
+	diff = diff-highlight | less -r
 [diff]
 	compactionHeuristic = true
 	renames = true
@@ -34,6 +35,9 @@
 	log2 = log --graph --decorate --oneline
 	log3 = log -p
 	status1 = status --short --branch
+	cml = "!f() { git log $1 --pretty=format:\"<li><a href='\"http://github.com/$2/commit/%H\"'>view commit</a> %s</li>\"; }; f"
+	bk = "!f() { git branch $1-bk`date \"+%Y%m%d%H%M%S\"`$2; }; f"
+	tidy = !git checkout master && git branch --merged | grep -v \"*\" | xargs -I % git branch -d %
 [credential]
 	helper = osxkeychain
 [color]

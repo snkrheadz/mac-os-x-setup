@@ -40,6 +40,7 @@ fish
 fontconfig
 fontforge
 freetype
+fribidi
 gcc
 gd
 gdbm
@@ -78,6 +79,7 @@ isl
 jpeg
 jpegoptim
 jq
+jx
 lame
 libassuan
 libcroco
@@ -85,6 +87,7 @@ libevent
 libffi
 libgcrypt
 libgpg-error
+libidn2
 libksba
 libmpc
 libogg
@@ -107,7 +110,10 @@ mpfr
 mysql
 nettle
 nginx
+nmap
 node
+node-build
+nodenv
 npth
 numpy
 nvm
@@ -126,11 +132,11 @@ pinentry
 pixman
 pkg-config
 pngquant
-postgresql
 pth
 pyenv
 python
 python3
+python@2
 rbenv
 readline
 redis
@@ -158,5 +164,4 @@ xvid
 xz
 yarn
 zeromq
-zsh
 "

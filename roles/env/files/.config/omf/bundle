@@ -1,6 +1,5 @@
 package exenv
 package foreign-env
-package nvm
 package peco
 package rbenv
 theme bobthefish

@@ -54,21 +54,17 @@
   ignore_errors: yes
   with_items:
     - 2.1.5
-    - 2.2.2
     - 2.2.5
-    - 2.3.0
-    - 2.3.1
-    - 2.3.2
     - 2.3.3
-    - 2.4.0
     - 2.4.1
+    - 2.5.1
 
 - name: rehash
   shell: rbenv rehash
 
-- name: set global ruby version 2.4.1
+- name: set global ruby version 2.5.1
   shell: |
-    rbenv global 2.4.1
+    rbenv global 2.5.1
 
 - name: install gem
   gem:
