@@ -8,9 +8,7 @@ env_files:
   - file: .inputrc
   - file: .vimrc
   - file: .config/fish/config.fish
-  - file: .config/omf/bundle
-  - file: .config/omf/init.fish
-  - file: .config/omf/theme
+  - file: .config/fish/fishfile
 
 ghq_root: "{{ ansible_user_dir }}/.ghq/github.com"
 

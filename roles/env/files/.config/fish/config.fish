@@ -1,20 +1,11 @@
-# Path to Oh My Fish install.
-set -q XDG_DATA_HOME
-  and set -x OMF_PATH "$XDG_DATA_HOME/omf"
-  or set -x OMF_PATH "$HOME/.local/share/omf"
-
-# Load oh-my-fish configuration.
-source $OMF_PATH/init.fish
-
 # bin
-set -x PATH $PATH $HOME/bin
-set -x PATH $PATH /usr/local/sbin
-
-# direnv
-eval (direnv hook fish)
+set -x PATH $PATH $HOME/bin /usr/local/sbin
 
 # git
 set -x PATH $PATH /usr/local/share/git-core/contrib/diff-highlight
+
+# direnv
+eval (direnv hook fish)
 
 # python
 source (pyenv init - | psub)
@@ -32,9 +23,72 @@ bass source '/Users/akira/bin/google-cloud-sdk/path.bash.inc'
 # The next line enables shell command completion for gcloud.
 bass source '/Users/akira/bin/google-cloud-sdk/completion.bash.inc'
 
+#
+# functions
+#
+function ls --description 'List contents of directory'
+  command ls -lhFG $argv
+end
 
-# bobthefish options
-set -g theme_display_ruby yes
-set -g theme_date_format "+%a %H:%M"
-set -g theme_powerline_fonts yes
-set -g theme_color_scheme solarized-dark
+function df --description 'Displays disk free space'
+  command df -H $argv
+end
+
+function fd --description 'List all the (sub)directory names in a direction'
+  find $argv[1] -type d
+end
+
+function spDisplayData --description 'Show the profile for external display'
+  system_profiler SPDisplaysDataType
+end
+
+function grep --description 'Colorful grep that ignores binary file and outputs line number'
+  command grep --color=always -I $argv
+end
+
+function gf --description 'Run git fetch'
+  command git fetch
+end
+
+function gdeletemergedcurrent --description 'Delete all local branches that is already merged to current branch (exludes master)'
+  command git branch --merged | grep -v "\*" | grep -v "master" | xargs -n 1 git branch -d
+end
+
+function gitlog --description 'Show git log in a nice format'
+  git log --no-merges --date=short --pretty='format:%C(yellow)%h %C(green)%cd %C(blue)%an%C(red)%d %C(reset)%s'
+end
+
+function pathlist --description 'Show a list of the paths on $PATH'
+  for val in $PATH
+    echo "$val"
+  end
+end
+
+function imginfo --description 'print image on iterm2 with its pixelHeight and pixelWidth'
+  imgcat $argv[1]; sips --getProperty pixelHeight --getProperty pixelWidth $argv[1]
+end
+
+function gitakinrt --description 'update local config for akinrt'
+  git config --local user.email aki.d.sc@gmail.com
+  git config --local user.name akinrt
+end
+
+function rupgrade --description 'shortcut command for upgrade rbenv and ruby-build depends on homebrew'
+  brew upgrade rbenv ruby-build
+end
+
+function mergeapp --description 'open FileMerge.app in Xcode.app'
+  open /Applications/Xcode.app/Contents/Applications/FileMerge.app
+end
+
+function pip3freeze --description 'create requirements.txt'
+  pip3 freeze > requirements.txt
+end
+
+#
+# Key binding
+#
+function fish_user_key_bindings
+  bind \cr peco_select_history
+  bind \c] peco_select_ghq_repository
+end

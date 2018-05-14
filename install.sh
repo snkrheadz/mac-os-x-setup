@@ -34,10 +34,8 @@ if ! [ -e ~/.vim/bundle ]; then
   git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 fi
 
-# install Oh My fish
-if ! which -s omf; then
-  curl -L http://get.oh-my.fish | fish
-fi
+# install fisherman
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
 # run playbook
 ansible-playbook site.yml

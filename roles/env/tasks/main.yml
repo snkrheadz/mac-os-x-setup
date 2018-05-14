@@ -1,7 +1,4 @@
 ---
-- name: make .nvm directory
-  file: path=~/.nvm state=directory
-
 - name: copy envs
   shell: |
     cp -f {{ item.file }} ~/{{ item.file }}

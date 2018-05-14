@@ -1,6 +1,0 @@
-package exenv
-package foreign-env
-package peco
-package rbenv
-theme bobthefish
-theme clearance

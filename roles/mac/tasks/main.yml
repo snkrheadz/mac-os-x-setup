@@ -53,8 +53,6 @@
     executable: /bin/bash
   ignore_errors: yes
   with_items:
-    - 2.1.5
-    - 2.2.5
     - 2.3.3
     - 2.4.1
     - 2.5.1
