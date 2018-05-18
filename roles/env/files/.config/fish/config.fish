@@ -18,10 +18,10 @@ set -x HOMEBREW_CASK_OPTS --appdir=/Applications
 
 # gcloud
 # The next line updates PATH for the Google Cloud SDK.
-bass source '/Users/akira/bin/google-cloud-sdk/path.bash.inc'
+bass source '~/bin/google-cloud-sdk/path.bash.inc'
 
 # The next line enables shell command completion for gcloud.
-bass source '/Users/akira/bin/google-cloud-sdk/completion.bash.inc'
+bass source '~/bin/google-cloud-sdk/completion.bash.inc'
 
 #
 # functions
@@ -83,6 +83,10 @@ end
 
 function pip3freeze --description 'create requirements.txt'
   pip3 freeze > requirements.txt
+end
+
+function curlh --description 'print headers'
+  curl -D - -s -o /dev/null $argv[1]
 end
 
 #
