@@ -24,21 +24,17 @@ for package in $BREW_PACKAGES; do
   if brew list -1 | grep -q "^$(basename $package)"; then
     echo "Skip: brew install ${package}"
   else
+    brew tap thoughtbot/formulae
     brew install $package
   fi
 done
 
-# install NeoBundle
-if ! [ -e ~/.vim/bundle ]; then
-  mkdir -p ~/.vim/bundle
-  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-fi
-
 # install fisherman
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
+# install dotfiles
+git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles
+. ~/dotfiles/hooks/post-up
+
 # run playbook
 ansible-playbook site.yml
-
-# update atom
-apm stars --user akinrt --install

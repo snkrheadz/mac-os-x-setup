@@ -5,5 +5,4 @@
   become: False
   roles:
     - { role: homebrew-cask, tags: [ homebrew-cask ] }
-    - { role: env, tags: [ env ] }
     - { role: mac, tags: [ mac ] }

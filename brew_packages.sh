@@ -138,6 +138,7 @@ python
 python3
 python@2
 rbenv
+rcm
 readline
 redis
 ripgrep
