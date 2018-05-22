@@ -27,10 +27,8 @@ ansible-playbook -i etc/ansible/hosts site.yml --check --ask-sudo-pass
 ** Shell Script **
 - Install Homebrew
 - Install Homebrew packages
-- Install NeoBundle
-- Install Oh My Fish
 - Run ansible-playbook
-- Install atom packages
+- Install dotfiles
 
 ** Ansible Playbook task lists **
 
@@ -43,11 +41,6 @@ playbook: site.yml
       homebrew-cask : Install/Upgrade Homebrew Cask	TAGS: [homebrew-cask]
       homebrew-cask : Tap external Homebrew Cask repositories	TAGS: [homebrew-cask]
       homebrew-cask : Install/Upgrade Homebrew Cask packages	TAGS: [homebrew-cask]
-      env : Make .nvm directory	TAGS: [env]
-      env : Make alias of nvm	TAGS: [env]
-      env : Copy envs	TAGS: [env]
-      env : Clone git repositories	TAGS: [env]
-      env : Change login shell to /usr/local/bin/fish	TAGS: [env]
       mac : Check if iterm2 config is differ	TAGS: [mac]
       mac : Install iterm2 imgls	TAGS: [mac]
       mac : Install iterm2 imgcat	TAGS: [mac]
