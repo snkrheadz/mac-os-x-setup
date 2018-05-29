@@ -20,6 +20,7 @@ homebrew_cask_packages:
   - dropbox
   - duet
   - firefox
+  - franz
   - geekbench
   - gyazo
   - hex-fiend
@@ -59,3 +60,4 @@ homebrew_cask_packages:
   - webpquicklook
   - wireshark
   - zeplin
+  
