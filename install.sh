@@ -24,6 +24,7 @@ for package in $BREW_PACKAGES; do
   if brew list -1 | grep -q "^$(basename $package)"; then
     echo "Skip: brew install ${package}"
   else
+    brew tap homebrew/cask
     brew tap thoughtbot/formulae
     brew install $package
   fi
@@ -33,8 +34,15 @@ done
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
 # install dotfiles
-git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles
-. ~/dotfiles/hooks/post-up
+git clone git://github.com/akinrt/dotfiles.git ~/dotfiles
+chmod 0755 $HOME/dotfiles/hooks/post-up
+ln -s $HOME/dotfiles/dotfiles-local $HOME/dotfiles-local
+env RCRC=$HOME/dotfiles/rcrc rcup
 
 # run playbook
-ansible-playbook site.yml
+ansible-playbook -i inventories/localhost/hosts site.yml
+
+echo '/usr/local/bin/fish' >> /etc/shells
+chsh -s /usr/local/bin/fish
+
+fisher edc/bass fisherman/getopts oh-my-fish/theme-godfather oh-my-fish/plugin-peco yoshiori/fish-peco_select_ghq_repository fisherman/rbenv fisherman/z
