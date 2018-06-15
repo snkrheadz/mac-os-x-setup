@@ -18,14 +18,15 @@ fi
 # load packages
 . brew_packages.sh
 
+brew tap homebrew/cask
+brew tap thoughtbot/formulae
+
 # install pakages
 for package in $BREW_PACKAGES; do
   # brew install $package
   if brew list -1 | grep -q "^$(basename $package)"; then
     echo "Skip: brew install ${package}"
   else
-    brew tap homebrew/cask
-    brew tap thoughtbot/formulae
     brew install $package
   fi
 done
