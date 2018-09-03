@@ -5,13 +5,13 @@ This is a provisioning for my MacBook which is designed from my MacBook environm
 ## Syntax check
 
 ```sh
-ansible-playbook -i etc/ansible/hosts site.yml --syntax-check
+ansible-playbook -i ./etc/ansible/hosts site.yml --syntax-check
 ```
 
 ## List tasks
 
 ```sh
-ansible-playbook -i etc/ansible/hosts site.yml --list-tasks
+ansible-playbook -i ./etc/ansible/hosts site.yml --list-tasks
 ```
 
 ## Check
@@ -19,7 +19,7 @@ ansible-playbook -i etc/ansible/hosts site.yml --list-tasks
 Run command below and type your sudo pass, because task `Change login shell to fish` use option `become_method: sudo` .
 
 ```sh
-ansible-playbook -i etc/ansible/hosts site.yml --check --ask-sudo-pass
+ansible-playbook -i ./etc/ansible/hosts site.yml --check --ask-sudo-pass
 ```
 
 ## Workflow

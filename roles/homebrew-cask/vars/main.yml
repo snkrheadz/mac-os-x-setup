@@ -29,6 +29,7 @@ homebrew_cask_packages:
   - insomnia
   - iterm2
   - java
+  - java8
   - jd-gui
   - kindle
   - libreoffice
@@ -49,7 +50,9 @@ homebrew_cask_packages:
   - quicklook-json
   - quicklookase
   - react-studio
+  - sketch
   - skype
+  - sublime-text
   - suspicious-package
   - the-unarchiver
   - vagrant
@@ -60,4 +63,3 @@ homebrew_cask_packages:
   - webpquicklook
   - wireshark
   - zeplin
-  

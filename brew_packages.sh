@@ -10,7 +10,9 @@ autoconf
 automake
 awscli
 axel
+bash
 bash-completion
+bazel
 binutils
 boost
 cairo
@@ -20,6 +22,7 @@ chromedriver
 cmake
 cocot
 convmv
+coreutils
 curl
 czmq
 direnv
@@ -132,10 +135,10 @@ pinentry
 pixman
 pkg-config
 pngquant
+postgresql
 pth
 pyenv
 python
-python3
 python@2
 rbenv
 rcm
@@ -145,8 +148,10 @@ ripgrep
 ruby
 ruby-build
 shared-mime-info
+sipcalc
 spark
 sqlite
+swig
 the_silver_searcher
 theora
 tidy-html5
