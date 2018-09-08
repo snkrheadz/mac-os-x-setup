@@ -114,9 +114,7 @@ mysql
 nettle
 nginx
 nmap
-node
-node-build
-nodenv
+nodebrew
 npth
 numpy
 nvm
