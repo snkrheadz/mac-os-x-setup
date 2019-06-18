@@ -13,14 +13,11 @@ homebrew_cask_repositories:
 # state choices: [present, absent, installed, uninstalled] (default: present)
 homebrew_cask_packages:
   - 1password
-  - anaconda
   - appcleaner
   - betterzipql
   - chatwork
   - dropbox
-  - duet
   - firefox
-  - franz
   - geekbench
   - gyazo
   - hex-fiend
@@ -34,6 +31,7 @@ homebrew_cask_packages:
   - kindle
   - libreoffice
   - macwinzipper
+  - maczip4win
   - namechanger
   - ngrok
   - onyx
@@ -49,9 +47,11 @@ homebrew_cask_packages:
   - quicklook-csv
   - quicklook-json
   - quicklookase
-  - react-studio
+  - sequel-pro
   - sketch
   - skype
+  - slack
+  - spotify
   - sublime-text
   - suspicious-package
   - the-unarchiver
@@ -61,5 +61,4 @@ homebrew_cask_packages:
   - visual-studio-code
   - vnc-viewer
   - webpquicklook
-  - wireshark
   - zeplin
