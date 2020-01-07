@@ -31,19 +31,34 @@ for package in $BREW_PACKAGES; do
   fi
 done
 
+# install ohmyzsh
+if ! [ -d ~/.oh-my-zsh ]; then
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+# remove .zshrc* due to use .zshrc from dotfiles
+if [ -f ~/.zshrc ]; then rm .zshrc; fi
+if [ -f ~/.zshrc.pre-oh-my-zsh ]; then rm ~/.zshrc.pre-oh-my-zsh; fi
+
 # install fisherman
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+if ! [ -f ~/.config/fish/functions/fisher.fish ]; then
+  curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+fi
 
 # install dotfiles
+if [ ~/dotfiles ]; then mv ~/dotfiles ~/dotfiles-$(date "+%Y-%m-%d-%H-%M-%S"); fi
 git clone git://github.com/akinrt/dotfiles.git ~/dotfiles
+git clone git://github.com/akinrt/dotfiles-local.git ~/dotfiles-local
 chmod 0755 $HOME/dotfiles/hooks/post-up
-ln -s $HOME/dotfiles/dotfiles-local $HOME/dotfiles-local
 env RCRC=$HOME/dotfiles/rcrc rcup
 
 # run playbook
 ansible-playbook -i inventories/localhost/hosts site.yml
 
-echo '/usr/local/bin/fish' >> /etc/shells
+if ! [ `cat /etc/shells | grep '/usr/local/bin/fish'` ]; then
+  echo '/usr/local/bin/fish' >> /etc/shells
+fi
+
 chsh -s /usr/local/bin/fish
 
-fisher edc/bass fisherman/getopts oh-my-fish/theme-godfather oh-my-fish/plugin-peco yoshiori/fish-peco_select_ghq_repository fisherman/rbenv fisherman/z
+fisher add decors/fish-ghq edc/bass fisherman/getopts fisherman/rbenv fisherman/z oh-my-fish/plugin-peco oh-my-fish/theme-godfather

@@ -37,11 +37,11 @@
     executable: /bin/bash
   ignore_errors: yes
   with_items:
-    - 2.7.14
-    - 3.6.2
+    - 2.7.17
+    - 3.8.1
 
 - name: set global python versions
-  shell: pyenv global 2.7.14 3.6.2
+  shell: pyenv global 2.7.17 3.8.1
 
 - name: init rbenv
   shell: rbenv init
@@ -53,15 +53,15 @@
     executable: /bin/bash
   ignore_errors: yes
   with_items:
-    - 2.4.4
-    - 2.5.1
+    - 2.6.1
+    - 2.7.0
 
 - name: rehash
   shell: rbenv rehash
 
-- name: set global ruby version 2.5.1
+- name: set global ruby version 2.6.1
   shell: |
-    rbenv global 2.5.1
+    rbenv global 2.6.1
 
 - name: install gem
   gem:
@@ -72,3 +72,6 @@
     - bundler
     - rsense
     - rails
+
+- name: copy config fish
+  command: cp -p roles/mac/files/config/fish/config.fish ~/.config/fish/config.fish

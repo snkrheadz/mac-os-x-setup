@@ -13,8 +13,8 @@ awscli
 axel
 bash
 bash-completion
+bat
 bazel
-binutils
 boost
 cairo
 carthage
@@ -82,6 +82,7 @@ hugo
 icu4c
 ilmbase
 imagemagick
+ipcalc
 isl
 jasper
 jpeg
@@ -178,9 +179,12 @@ spark
 speex
 sphinx-doc
 sqlite
+swiftlint
 swig
+terraform
 tesseract
 texi2html
+tfenv
 the_silver_searcher
 theora
 tidy-html5

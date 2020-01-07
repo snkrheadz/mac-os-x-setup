@@ -16,6 +16,10 @@ homebrew_cask_packages:
   - appcleaner
   - betterzipql
   - chatwork
+  - cyberduck
+  - dash
+  - docker
+  - drawio
   - dropbox
   - firefox
   - geekbench
@@ -28,6 +32,7 @@ homebrew_cask_packages:
   - java
   - java8
   - jd-gui
+  - karabiner-elements
   - kindle
   - libreoffice
   - macwinzipper
@@ -37,6 +42,7 @@ homebrew_cask_packages:
   - onyx
   - openoffice
   - poedit
+  - postman
   - psequel
   - qlcolorcode
   - qlimagesize
@@ -47,10 +53,12 @@ homebrew_cask_packages:
   - quicklook-csv
   - quicklook-json
   - quicklookase
+  - sampler
   - sequel-pro
   - sketch
   - skype
   - slack
+  - soqlxplorer
   - spotify
   - sublime-text
   - suspicious-package
