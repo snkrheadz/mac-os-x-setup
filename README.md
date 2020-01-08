@@ -19,7 +19,7 @@ ansible-playbook -i ./etc/ansible/hosts site.yml --list-tasks
 Run command below and type your sudo pass, because task `Change login shell to fish` use option `become_method: sudo` .
 
 ```sh
-ansible-playbook -i ./etc/ansible/hosts site.yml --check --ask-sudo-pass
+ansible-playbook -i ./etc/ansible/hosts site.yml --check
 ```
 
 ## Workflow
@@ -72,15 +72,13 @@ exec /bin/bash -l
 
 ## Install
 
-Run following shell script to install my OSX setting on MacBook.
+Run following shell script to install.
 
 ```sh
 . install.sh
 ```
 
-Open new terminal window after finish installation.  
-And or you should also restart your MacBook.
-
+Run `zplug load --verbose` to install zsh plugins if you change user shell to zsh.
 
 ### Ansible Playbook [Directory Layout](http://docs.ansible.com/ansible/playbooks_best_practices.html#directory-layout)
 
