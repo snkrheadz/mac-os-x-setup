@@ -2,16 +2,17 @@
 set -U fish_user_paths $HOME/bin /usr/local/sbin $fish_user_paths
 
 # git
-set -U fish_user_paths /usr/local/share/git-core/contrib/diff-highlight $fish_user_paths
+if test -d /usr/local/share/git-core/contrib/diff-highlight
+  set -U fish_user_paths /usr/local/share/git-core/contrib/diff-highlight $fish_user_paths
+end
 
 # rails credentials:edit
 set -x EDITOR vim
 
-# nodebrew
-set -U fish_user_paths $HOME/.nodebrew/current/bin $fish_user_paths
-
 # direnv
-eval (direnv hook fish)
+if which direnv > /dev/null
+  eval (direnv hook fish)
+end
 
 # python
 if which pyenv > /dev/null
@@ -21,6 +22,8 @@ end
 
 # go
 if which goenv > /dev/null
+  set -x GOPATH $HOME/.go
+  set -U fish_user_paths $GOPATH/bin $fish_user_paths
   source (goenv init - | psub)
 end
 
