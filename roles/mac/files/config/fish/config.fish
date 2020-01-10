@@ -57,6 +57,11 @@ alias docker-stop-all="docker stop (docker ps -a -q)"
 #
 # functions
 #
+function mkdcd --description 'make directory and change directory to it'
+  mkdir $argv[1]
+  cd $argv[1]
+end
+
 function pathlist --description 'Show a list of the paths on $PATH'
   for val in $PATH
     echo "$val"
