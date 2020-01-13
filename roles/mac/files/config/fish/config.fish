@@ -53,6 +53,7 @@ alias pip3freeze="pip3 freeze > requirements.txt"
 alias curlh="curl -D - -s -o /dev/null $argv[1]"
 alias docker-rm-all="docker rm (docker ps -a -q)"
 alias docker-stop-all="docker stop (docker ps -a -q)"
+alias ipfy="curl 'https://api.ipify.org?format=text'"
 
 #
 # functions
