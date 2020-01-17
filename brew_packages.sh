@@ -41,6 +41,7 @@ erlang
 exenv
 ffmpeg
 ffmpeg2theora
+firebase-cli
 fish
 flac
 fontconfig
@@ -48,6 +49,7 @@ fontforge
 freetype
 frei0r
 fribidi
+fzy
 gcc
 gd
 gdbm
@@ -153,6 +155,7 @@ peco
 perl
 phantomjs
 pinentry
+pipenv
 pixman
 pkg-config
 pngquant
@@ -162,6 +165,7 @@ pv
 pyenv
 python
 python@2
+python@3.8
 rbenv
 rcm
 readline
@@ -205,4 +209,5 @@ xvid
 xz
 yarn
 zeromq
+zplug
 "
