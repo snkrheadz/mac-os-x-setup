@@ -137,6 +137,7 @@ netpbm
 nettle
 nmap
 node
+nodebrew
 npth
 numpy
 oniguruma
