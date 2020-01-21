@@ -14,13 +14,18 @@ if which direnv > /dev/null
   eval (direnv hook fish)
 end
 
-# python
+# nodebrew
+if which nodebrew > /dev/null
+  set -U fish_user_paths $HOME/.nodebrew/current/bin $fish_user_paths
+end
+
+# pyenv
 if which pyenv > /dev/null
   set -x PYENV_ROOT $HOME/.pyenv
   source (pyenv init - | psub)
 end
 
-# go
+# goenv
 if which goenv > /dev/null
   set -x GOPATH $HOME/.go
   set -U fish_user_paths $GOPATH/bin $fish_user_paths
