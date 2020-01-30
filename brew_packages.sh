@@ -23,6 +23,7 @@ cask-repair
 chromedriver
 cmake
 cocot
+composer
 convmv
 coreutils
 curl

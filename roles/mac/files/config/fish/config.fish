@@ -32,6 +32,11 @@ if which goenv > /dev/null
   source (goenv init - | psub)
 end
 
+# composer
+if test -d $HOME/.composer/vendor/bin
+  set -U fish_user_paths $HOME/.composer/vendor/bin $fish_user_paths
+end
+
 # homebrew cask option
 set -x HOMEBREW_CASK_OPTS --appdir=/Applications
 
