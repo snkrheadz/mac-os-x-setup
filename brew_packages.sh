@@ -14,13 +14,10 @@ axel
 bash
 bash-completion
 bat
-bazel
 boost
 cairo
 carthage
 cask
-cask-repair
-chromedriver
 cmake
 cocot
 composer
@@ -29,7 +26,6 @@ coreutils
 curl
 czmq
 direnv
-dirmngr
 dnsmasq
 docbook
 docbook-xsl
@@ -39,7 +35,9 @@ elixir
 elixir-build
 emacs
 erlang
+exa
 exenv
+fd
 ffmpeg
 ffmpeg2theora
 firebase-cli
@@ -56,6 +54,7 @@ gd
 gdbm
 gdk-pixbuf
 gettext
+gh
 ghostscript
 ghq
 gibo
@@ -71,15 +70,14 @@ gnutls
 go
 gobject-introspection
 goenv
-gpg-agent
 graphite2
 graphviz
 gts
 harfbuzz
+hexyl
 highlight
 hr
 htop
-htop-osx
 hub
 hugo
 icu4c
@@ -91,6 +89,7 @@ jasper
 jpeg
 jpegoptim
 jq
+krb5
 lame
 leptonica
 libass
@@ -146,7 +145,6 @@ openblas
 opencore-amr
 openexr
 openjpeg
-openssl
 openssl@1.1
 opus
 p11-kit
@@ -155,13 +153,13 @@ pcre
 pcre2
 peco
 perl
-phantomjs
 pinentry
 pipenv
 pixman
 pkg-config
 pngquant
 postgresql
+procs
 pth
 pv
 pyenv
@@ -190,7 +188,6 @@ swig
 terraform
 tesseract
 texi2html
-tfenv
 the_silver_searcher
 theora
 tidy-html5
