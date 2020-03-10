@@ -88,6 +88,10 @@ function gitakinrt --description 'update local config for akinrt'
   git config --local user.name akinrt
 end
 
+function ghq-sync-all --description 'sync with a remote repository on entire repositories managed by ghq'
+  ghq list | sed -E 's/^[^\/]+\/(.+)/\1/' | xargs -n 1 -P 10 ghq get -u
+end
+
 #
 # Key binding
 #
