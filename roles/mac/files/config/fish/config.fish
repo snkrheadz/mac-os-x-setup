@@ -92,6 +92,19 @@ function ghq-sync-all --description 'sync with a remote repository on entire rep
   ghq list | sed -E 's/^[^\/]+\/(.+)/\1/' | xargs -n 1 -P 10 ghq get -u
 end
 
+function git-change-lines
+  if git rev-parse 2> /dev/null
+    set authors (git shortlog -sne --all --no-merges | awk '{print $NF}')
+    for author in $authors
+      echo "----------------------------------------"
+      echo $author
+      git log --numstat --pretty="%H" --author="$author" --no-merges | awk 'NF==3{plus+=$1; minus+=$2} END {printf("total: %d (\x1b[32m+%d\033[m, \x1b[31m-%d\033[m)\n",plus+minus , plus, minus)}'
+    end
+  else
+    echo 'fatal: not a git repository (or any of the parent directories): .git'
+  end
+end
+
 #
 # Key binding
 #
