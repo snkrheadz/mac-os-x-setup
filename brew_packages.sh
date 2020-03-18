@@ -185,9 +185,9 @@ sphinx-doc
 sqlite
 swiftlint
 swig
-terraform
 tesseract
 texi2html
+tfenv
 the_silver_searcher
 theora
 tidy-html5
