@@ -14,10 +14,13 @@ axel
 bash
 bash-completion
 bat
+bazel
 boost
 cairo
 carthage
 cask
+cask-repair
+chromedriver
 cmake
 cocot
 composer
@@ -26,6 +29,7 @@ coreutils
 curl
 czmq
 direnv
+dirmngr
 dnsmasq
 docbook
 docbook-xsl
@@ -70,14 +74,17 @@ gnutls
 go
 gobject-introspection
 goenv
+gpg-agent
 graphite2
 graphviz
 gts
 harfbuzz
+helm
 hexyl
 highlight
 hr
 htop
+htop-osx
 hub
 hugo
 icu4c
@@ -145,6 +152,7 @@ openblas
 opencore-amr
 openexr
 openjpeg
+openssl
 openssl@1.1
 opus
 p11-kit
@@ -153,6 +161,7 @@ pcre
 pcre2
 peco
 perl
+phantomjs
 pinentry
 pipenv
 pixman
@@ -185,6 +194,7 @@ sphinx-doc
 sqlite
 swiftlint
 swig
+terraform
 tesseract
 texi2html
 tfenv
