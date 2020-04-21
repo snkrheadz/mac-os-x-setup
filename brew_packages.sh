@@ -79,7 +79,7 @@ graphite2
 graphviz
 gts
 harfbuzz
-helm
+helm@2
 hexyl
 highlight
 hr

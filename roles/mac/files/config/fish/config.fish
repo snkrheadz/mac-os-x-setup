@@ -32,9 +32,9 @@ if which goenv > /dev/null
   source (goenv init - | psub)
 end
 
-# composer
-if test -d $HOME/.composer/vendor/bin
-  set -U fish_user_paths $HOME/.composer/vendor/bin $fish_user_paths
+# helm@2
+if test -d /usr/local/opt/helm@2/bin
+  set -g fish_user_paths "/usr/local/opt/helm@2/bin" $fish_user_paths
 end
 
 # homebrew cask option
