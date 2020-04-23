@@ -97,6 +97,8 @@ jpeg
 jpegoptim
 jq
 krb5
+kubectx
+kubernetes-cli
 lame
 leptonica
 libass

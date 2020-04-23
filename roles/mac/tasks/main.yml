@@ -75,3 +75,6 @@
 
 - name: copy config fish
   command: cp -p roles/mac/files/config/fish/config.fish ~/.config/fish/config.fish
+
+- name: copy kubectl aliases
+  command: cp -p roles/mac/files/config/fish/kubectl_aliases.fish ~/.config/fish/kubectl_aliases.fish
