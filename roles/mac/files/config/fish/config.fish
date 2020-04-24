@@ -66,6 +66,18 @@ alias docker-stop-all="docker stop (docker ps -a -q)"
 alias ipfy="curl 'https://api.ipify.org?format=text'"
 
 #
+# kubectl-aliases
+#
+if test -f $HOME/.config/fish/kubectl_aliases.fish
+  source $HOME/.config/fish/kubectl_aliases.fish
+end
+
+#
+# BusyBox
+# see: https://busybox.net/downloads/BusyBox.html
+alias bb="kubectl run busybox --image=busybox:1.28 --rm -it --restart=Never"
+
+#
 # functions
 #
 function mkdcd --description 'make directory and change directory to it'
