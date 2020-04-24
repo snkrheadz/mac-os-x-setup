@@ -21,6 +21,7 @@ carthage
 cask
 cask-repair
 chromedriver
+click
 cmake
 cocot
 composer
@@ -97,6 +98,7 @@ jpeg
 jpegoptim
 jq
 krb5
+kube-ps1
 kubectx
 kubernetes-cli
 lame
@@ -194,6 +196,8 @@ spark
 speex
 sphinx-doc
 sqlite
+squashctl
+stern
 swiftlint
 swig
 terraform
