@@ -75,7 +75,7 @@ end
 #
 # BusyBox
 # see: https://busybox.net/downloads/BusyBox.html
-alias bb="kubectl run busybox --image=busybox:1.28 --rm -it --restart=Never"
+alias bb="kubectl run busybox --image=busybox:1.28 --rm -it --restart=Never --command --"
 
 #
 # functions
