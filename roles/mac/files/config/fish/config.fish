@@ -27,8 +27,8 @@ end
 
 # goenv
 if which goenv > /dev/null
-  set -x GOPATH $HOME/.go
-  set -U fish_user_paths $GOPATH/bin $fish_user_paths
+  set -x GOENV_ROOT $HOME/.goenv
+  set -U fish_user_paths $GOENV_ROOT/bin $fish_user_paths
   source (goenv init - | psub)
 end
 
