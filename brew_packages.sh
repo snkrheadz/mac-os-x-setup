@@ -98,6 +98,7 @@ jpeg
 jpegoptim
 jq
 krb5
+ks
 kube-ps1
 kubectx
 kubernetes-cli
