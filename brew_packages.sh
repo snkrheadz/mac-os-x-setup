@@ -97,6 +97,7 @@ jasper
 jpeg
 jpegoptim
 jq
+kompose
 krb5
 ks
 kube-ps1
