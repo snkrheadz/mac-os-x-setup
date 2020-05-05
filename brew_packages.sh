@@ -190,6 +190,7 @@ ruby-build
 sdl2
 shared-mime-info
 sipcalc
+skaffold
 snappy
 sops
 source-highlight
