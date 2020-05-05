@@ -191,12 +191,14 @@ sdl2
 shared-mime-info
 sipcalc
 snappy
+sops
 source-highlight
 spark
 speex
 sphinx-doc
 sqlite
 squashctl
+srt
 stern
 swiftlint
 swig
