@@ -215,6 +215,7 @@ tree
 unbound
 utf8proc
 v8
+velero
 vim
 webp
 wget
