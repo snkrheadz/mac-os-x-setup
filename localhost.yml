@@ -2,6 +2,7 @@
 - name: set up my macbook
   hosts: localhost
   connection: local
+  gather_facts: True
   become: False
   roles:
     - { role: homebrew-cask, tags: [ homebrew-cask ] }

@@ -14,7 +14,6 @@ homebrew_cask_repositories:
 homebrew_cask_packages:
   - 1password
   - appcleaner
-  - betterzipql
   - chatwork
   - dash
   - docker
@@ -27,7 +26,6 @@ homebrew_cask_packages:
   - insomnia
   - iterm2
   - java
-  - java8
   - jd-gui
   - karabiner-elements
   - libreoffice
@@ -46,7 +44,6 @@ homebrew_cask_packages:
   - quicklook-csv
   - quicklook-json
   - quicklookase
-  - sampler
   - sequel-pro
   - sketch
   - skype

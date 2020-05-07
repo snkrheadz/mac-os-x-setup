@@ -10,8 +10,8 @@ osx_defaults:
 
   - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
     key: DragLock
-    type: bool
-    value: false
+    type: int
+    value: 0
 
   - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
     key: Dragging
@@ -133,8 +133,8 @@ osx_defaults:
 
   - domain: com.apple.AppleMultitouchTrackpad
     key: DragLock
-    type: bool
-    value: false
+    type: int
+    value: 0
 
   - domain: com.apple.AppleMultitouchTrackpad
     key: Dragging

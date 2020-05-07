@@ -53,7 +53,7 @@ chmod 0755 $HOME/dotfiles/hooks/post-up
 env RCRC=$HOME/dotfiles/rcrc rcup
 
 # run playbook
-ansible-playbook -i inventories/localhost/hosts site.yml
+ansible-playbook -i inventory/localhost localhost.yml
 
 if ! [ `cat /etc/shells | grep '/usr/local/bin/fish'` ]; then
   echo '/usr/local/bin/fish' >> /etc/shells

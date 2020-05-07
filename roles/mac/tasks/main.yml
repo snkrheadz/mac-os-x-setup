@@ -16,7 +16,10 @@
   get_url: url=https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgls dest=/usr/local/bin/imgls mode=0755
 
 - name: install iterm2 imgcat
-  get_url: url=https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgcat dest=/usr/local/bin/imgcat mode=0755
+  get_url:
+    url: https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgcat
+    dest: /usr/local/bin/imgcat
+    mode: 0755
 
 - name: setup OS X defaults
   osx_defaults:
@@ -54,14 +57,14 @@
   ignore_errors: yes
   with_items:
     - 2.6.1
-    - 2.7.0
+    - 2.7.1
 
 - name: rehash
   shell: rbenv rehash
 
-- name: set global ruby version 2.6.1
+- name: set global ruby version 2.7.1
   shell: |
-    rbenv global 2.6.1
+    rbenv global 2.7.1
 
 - name: install gem
   gem:
