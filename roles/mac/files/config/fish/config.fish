@@ -1,5 +1,5 @@
 # bin
-set -U fish_user_paths $HOME/bin /usr/local/sbin $fish_user_paths
+set -U fish_user_paths $HOME/bin /usr/local/sbin
 
 # git
 if test -d /usr/local/share/git-core/contrib/diff-highlight
